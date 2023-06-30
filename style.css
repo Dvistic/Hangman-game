@@ -207,3 +207,13 @@ button:hover{
 
 }
 
+@media screen and (width: 360px){
+
+    #hangstandHangman{
+        transform: scale(0.65, 0.70);
+        
+    }
+    
+
+}
+
