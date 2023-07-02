@@ -84,8 +84,7 @@ function createInputCharacterFields(word){
     inputChar.setAttribute("type", "text");
     inputChar.maxLength = "1"
     inputChar.addEventListener("keyup", ()=>{
-        console.log(word);
-        let onlyLetters = /^[A-Za-z]+$/;
+        const onlyLetters = /^[A-Za-z]+$/;
             if(inputChar.value.match(onlyLetters) && inputChar.value == word.charAt(inputChar.id)){
                 inputChar.style.backgroundColor = "lightgreen";
                 inputChar.setAttribute("disabled", "disabled");
@@ -127,7 +126,7 @@ function generateRandomHintLetters(randWord){
         for(i = 0; i < 5; i++){
             checkIfGeneratedHintLettersDuplicate(randomLetters, randWord);
         }
-        //letterFields.style.width += 20;
+        
     }
     
 }
@@ -241,7 +240,7 @@ const definitionRecord = await definitionResponse.json();
         wordDefinitionParagraph.style.color = "red";
         wordDefinitionParagraph.textContent = "The defintion for this word was not found.";
     }
-        //location.reload();
+        
     }
         
 }
